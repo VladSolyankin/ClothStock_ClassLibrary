@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace ClothStock_ClassLibrary
 {
@@ -9,32 +9,42 @@ namespace ClothStock_ClassLibrary
         { get; set; }
         public ProducingFactory Factory { get; set; }
         public Types ClothType { get; set; }
-        public double? CostPerPiece { get; set; }
+        public double? CostPerMetre { get; set; }
 
-        public DateTime? CheckDate { get; set; }
+        public DateTime CheckDate { get; set; }
         public double? MetresInStock { get; set; }
-        public double? Markup { get; set; }
+        public Markup? Markup { get; set; }
 
         public Cloth()
         {
             ClothName = "Неведомая ткань";
             Factory = ProducingFactory.Прочие;
             ClothType = Types.Прочие;
-            CostPerPiece = null;
-            CheckDate = null;
+            CostPerMetre = null;
+            CheckDate = DateTime.Now;
             MetresInStock = null;
             Markup = null;
         }
-        public Cloth(string clothName, ProducingFactory factory, Types clothType, double cost,
-                     DateTime date, double metres, double markup)
+        public Cloth(string clothName, 
+                     ProducingFactory factory, Types clothType, double cost,
+                     DateTime date, double metres, Markup markup)
         {
             ClothName = clothName;
             Factory = factory;
             ClothType = clothType;
-            CostPerPiece = cost;
+            CostPerMetre = cost;
             CheckDate = date;
             MetresInStock = metres;
             Markup = markup;
+        }
+
+        public override string ToString()
+        {
+            return $"Ткань {ClothName}, изготовленная на фабрике {Factory} (тип {ClothType}): " +
+                $"цена за один метр {CostPerMetre}, " +
+                $"дата инвентаризации {CheckDate.ToString("dd.MM.yyyy")}, " +
+                $"количество на складе {MetresInStock}" +
+                $", наценка {Markup}(%)";
         }
     }
 }
