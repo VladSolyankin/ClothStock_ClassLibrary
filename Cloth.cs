@@ -8,8 +8,9 @@ namespace ClothStock_ClassLibrary
         public string ClothName
         { get; set; }
         public ProducingFactory Factory { get; set; }
+        public int Id { get; set; }
         public Types ClothType { get; set; }
-        public double? CostPerMetre { get; set; }
+        public double CostPerMetre { get; set; }
 
         public DateTime CheckDate { get; set; }
         public double? MetresInStock { get; set; }
@@ -20,7 +21,7 @@ namespace ClothStock_ClassLibrary
             ClothName = "Неведомая ткань";
             Factory = ProducingFactory.Прочие;
             ClothType = Types.Прочие;
-            CostPerMetre = null;
+            CostPerMetre = 0;
             CheckDate = DateTime.Now;
             MetresInStock = null;
             Markup = null;
