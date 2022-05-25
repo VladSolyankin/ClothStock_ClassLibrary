@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothStock_ClassLibrary", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest_ClothStock", "..\UnitTest_ClothStock\UnitTest_ClothStock.csproj", "{483C9912-F03C-4D52-995A-85550AA954B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothStock_WPF", "..\ClothStock_WPF\ClothStock_WPF.csproj", "{9A8FF71E-4B5D-4B34-89E0-3842031DCAC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{483C9912-F03C-4D52-995A-85550AA954B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483C9912-F03C-4D52-995A-85550AA954B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483C9912-F03C-4D52-995A-85550AA954B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A8FF71E-4B5D-4B34-89E0-3842031DCAC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A8FF71E-4B5D-4B34-89E0-3842031DCAC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A8FF71E-4B5D-4B34-89E0-3842031DCAC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A8FF71E-4B5D-4B34-89E0-3842031DCAC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
