@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClothStock_ClassLibrary
 {
-    public class Stock
+    public class Stock : List<Cloth>
     {
     }
 }
