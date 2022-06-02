@@ -8,13 +8,12 @@ namespace ClothStock_ClassLibrary
         public string ClothName
         { get; set; }
         public ProducingFactory Factory { get; set; }
-        public int Id { get; set; }
         public Types ClothType { get; set; }
         public double CostPerMetre { get; set; }
 
         public DateTime CheckDate { get; set; }
         public double? MetresInStock { get; set; }
-        public Markup? Markup { get; set; }
+        public Markup Markup { get; set; }
 
         public Cloth()
         {
@@ -23,12 +22,12 @@ namespace ClothStock_ClassLibrary
             ClothType = Types.Прочие;
             CostPerMetre = 0;
             CheckDate = DateTime.Now;
-            MetresInStock = null;
-            Markup = null;
+            MetresInStock = 0;
+            Markup = 0;
         }
         public Cloth(string clothName, 
                      ProducingFactory factory, Types clothType, double cost,
-                     DateTime date, double metres, Markup markup)
+                     DateTime date, double metres, Markup markup) : this()
         {
             ClothName = clothName;
             Factory = factory;
